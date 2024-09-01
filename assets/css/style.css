@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", system-ui;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#head {
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #8c26ec;
+}
+
+#head>nav {
+    display: flex;
+    gap: 50px;
+}
+
+#head>nav>a {
+    color: #fff;
+    font-weight: 600;
+    transition: .3s ease-in-out
+}
+
+#head>nav>a:hover {
+    border-radius: 8px;
+    background-color: #fff;
+    color: #8c26ec;
+    padding: 10px 20px;
+}
+
+footer>div {
+    height: 60vh;
+    background-color: #8c26ec;
+}
+
+.wrapper,
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.social-icon {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 44px;
+    height: 44px;
+    margin: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    margin: auto;
+    font-size: 18px;
+    color: hsl(212, 16%, 48%);
+    z-index: 1;
+    filter: opacity(50%);
+}
+
+.social-icon::after {
+    content: '';
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    transform: translate(0, 64px);
+    border-radius: 50%;
+    transition: all 0.6s ease;
+}
+
+.social-icon.instagram::after {
+    background-image: linear-gradient(to bottom right,
+            #4f5bd5,
+            #962fbf,
+            #d62976,
+            #fa7e1e,
+            #feda75);
+}
+
+.social-icon.whatsapp::after {
+    background-image: linear-gradient(to bottom right,
+            #25d366,
+            #25d366,
+            #25d366,
+            #128c7e);
+}
+
+.social-icon.youtube::after {
+    background-color: #ff0000;
+}
+
+.social-icon.twitter::after {
+    background-color: #1da1f2;
+}
+
+.social-icon:hover {
+    transform: translateY(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+    width: 64px;
+    height: 64px
+}
+
+.social-icon:hover i {
+    color: #fff;
+    transform: scale(1.5);
+    font-size: 26px;
+    filter: opacity(100%);
+}
+
+.social-icon:hover::after {
+    transform: translate(0) scale(1.5);
+}

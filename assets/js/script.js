@@ -1,0 +1,1 @@
+gsap.from('#head', {duration:1.2, y:'-100%', ease:'bounce'})
